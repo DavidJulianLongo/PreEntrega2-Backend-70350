@@ -42,7 +42,6 @@ El proyecto incluye un middleware llamado `validateProduct` que se encarga de va
 
 - **DELETE /productos/:pid**: Elimina un producto específico por su `id`.
 
-
 ### Rutas de Carrito (`/api/carts`)
 
 - **POST /api/carts**: Crea un carrito.
@@ -53,5 +52,29 @@ El proyecto incluye un middleware llamado `validateProduct` que se encarga de va
 
 - **POST /api/carts/:cid/product/:pid**: Añade un producto específico al carrito, y si el producto ya se encuentra en el carrito, aumenta su cantidad (quantity).
 
+### Rutas de Vista (`/views`)
+
+- **GET /**: Muestra una tabla con la lista de productos disponibles. Esta ruta es accesible a través de un navegador web y muestra una vista con los productos que se encuentran en el sistema.
+
+- **GET /realtimeproducts**: Muestra un formulario para agregar y eleiminar productos los cuales se muestran en una tabla. 
+
+## WebSockets
+
+El proyecto incluye una implementación de `WebSockets` para permitir la actualización en tiempo real de los productos. Al agregar o eliminar productos desde el formulario en la ruta `/realtimeproducts`, los cambios se transmiten de inmediato a todos los clientes conectados. Esto permite que la lista de productos se actualice sin necesidad de recargar la página.
+
+## Handlebars
+
+En este proyecto, se usa para renderizar:
+
+La tabla de productos: En la ruta /realtimeproducts, Handlebars crea una tabla que muestra la lista de productos.
+El formulario de productos: La misma ruta /realtimeproducts también muestra un formulario para agregar o eliminar productos.
+
+## Tecnologías Utilizadas
+
+- Node.js
+- Express
+- Handlebars
+- WebSockets
+- FileSystem (para persistencia de datos)
 
 
