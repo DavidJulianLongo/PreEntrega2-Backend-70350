@@ -9,6 +9,11 @@
 table{
     margin: 0;
 }
+
+.table-prod{
+    width: 64rem;
+}
+
 .form-container {
     width: 100%;
     max-width: 25rem;
@@ -66,8 +71,8 @@ textarea:focus {
     outline: none;
 }
 
-.add-product-btn {
-    margin-top: 1.25rem;
+.form-product-btn {
+    margin: 1.25rem 0 3.125rem 0;
     padding: 0.625rem;
     background-color: #4a90e2;
     color: #ffffff;
@@ -79,22 +84,10 @@ textarea:focus {
     transition: background-color 0.3s;
 }
 
-.add-product-btn:hover {
+.form-product-btn:hover {
     background-color: #104881;
 }
 
-button {
-    padding: 8px 12px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #c20000;
-    color: white;
-}
 
-button:active {
-    transform: scale(0.99); 
-}
 
 

@@ -12,7 +12,6 @@ function showProducts(products) {
             <td>$${product.price}</td>
             <td>${product.stock}</td>
             <td>${product.category}</td>
-            <td>${product.description}</td>
         `;
         tableBody.appendChild(row);
     });

@@ -26,7 +26,7 @@ const httpServer = app.listen(8080, () => console.log("Server ok puerto 8080"));
 const socketServer = new Server(httpServer);
 
 socketServer.on('connection', async (socket) => {
-    
+
     // Emite todos los productos 
     const products = await productsManager.getAllProd();
     socket.emit('updateProducts', products);
@@ -38,5 +38,10 @@ socketServer.on('connection', async (socket) => {
         socketServer.emit('updateProducts', products);
     })
 
+    socket.on('deleteProd', async ({ id }) => {
+        await productsManager.deleteProd(id)
+        const products = await productsManager.getAllProd();
+        socketServer.emit('updateProducts', products);
+    })
 })
 

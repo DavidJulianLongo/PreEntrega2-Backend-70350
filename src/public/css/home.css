@@ -1,6 +1,10 @@
 .product-table{
-    width: 80%;
+    width: 90rem;
     margin: 3.125rem auto;
+}
+
+.product-table h2{
+    margin-bottom: .875rem;
 }
 
 table {

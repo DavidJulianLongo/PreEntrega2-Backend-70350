@@ -1,7 +1,8 @@
 <main class="container">
     <div class="form-container">
-        <h2>Ingresar producto</h2>
-        <form id="productForm">
+        <form id="productFormAdd">
+            <h2>Ingresar producto</h2>
+
             <label for="name">Nombre</label>
             <input type="text" id="name" name="productName" required placeholder="Nombre del producto">
 
@@ -15,10 +16,15 @@
             <label for="category">Categoría</label>
             <input type="text" id="category" name="category" required placeholder="Categoría del producto">
 
-            <label for="description">Descripción</label>
-            <textarea id="description" name="description" required placeholder="Descripción del producto"></textarea>
+            <button type="submit" class="form-product-btn">Agregar</button>
+        </form>
+        <form id="productFormDel">
+            <h2>Eliminar producto</h2>
 
-            <button type="submit" class="add-product-btn">Agregar</button>
+            <label for="productId">Id del producto</label>
+            <input type="text" id="productId" name="productId" placeholder="Id del producto">
+
+            <button type="submit" class="form-product-btn">Eliminar</button>
         </form>
     </div>
 
@@ -26,12 +32,11 @@
         <table id="productTable">
             <thead>
                 <tr>
+                    <th>ID del producto</th>
                     <th>Nombre</th>
                     <th>Precio</th>
                     <th>Stock</th>
                     <th>Categoría</th>
-                    <th>Descripción</th>
-                    <th colspan="2"></th>
                 </tr>
             </thead>
             <tbody id="productTableBody">
